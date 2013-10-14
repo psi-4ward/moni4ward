@@ -1,0 +1,25 @@
+<?php if(!is_array($this->servers) || count($this->servers) == 0): ?>
+<p class="error">Keine Server gefunden</p>
+<?php return; endif;?>
+
+<?php foreach($this->servers as $srv):?>
+<div class="server">
+	<h1><?php echo $srv['title']?></h1>
+	<div class="services">
+	<?php foreach($srv['services'] as $service): ?>
+		<?php if($service['status'] == 'PASS'):?>
+		<div class="service" style="background:#99FF99">
+			<?php echo $service['title'];?>
+		</div>
+		<?php else:?>
+		<div class="service" style="background:#FF9999">
+			<b><?php echo $service['title'];?></b>, <?php echo $service['failCount'];?> times, <?php echo date('d.m.Y',$service['lastCheck']).' um '.date('H:i:s',$service['lastCheck']).' Uhr';?> 
+		</div>
+		<?php endif;?>
+	<?php endforeach;?>
+	</div>
+
+</div>
+<hr>
+<?php endforeach;?>
+

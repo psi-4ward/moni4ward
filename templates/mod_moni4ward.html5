@@ -1,0 +1,25 @@
+
+<div class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+
+<?php echo $this->content; ?>
+
+<div id="moni4wardChart"></div>
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.addEvent('domready',function(){
+		return;
+	new Swiff('plugins/openflashchart/open-flash-chart.swf',{
+		container:'moni4wardChart',
+		width:300,
+		height:300,
+		vars:{
+			'data-file':'system/modules/moni4ward/ChartData.php?id=1'
+		}
+	});
+});
+//--><!]]>
+</script>
+
+
+</div>
