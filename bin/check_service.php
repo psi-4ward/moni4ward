@@ -58,8 +58,6 @@ class check_service extends System
 			{
 				// fork subshell
 				$str = exec("/usr/bin/php ".__FILE__." --serverID {$objServer->id} &");
-				// echo "/usr/bin/php ".__FILE__." --serverID {$objServer->id} &";
-				echo $str;
 			}
 		}
 	}
@@ -93,7 +91,7 @@ class check_service extends System
 			
 		while($objTest->next())
 		{
-			$erg = $this->runCheck($objTest->row(),true);
+			$erg = $this->runCheck($objTest, true);
 			if(!$erg && $objTest->exclusive)
 			{
 				// no more tests if an exclusive test fails
@@ -105,11 +103,11 @@ class check_service extends System
 	
 	/**
 	 * run a specific test
-	 * 
+	 *
 	 * @param mixed $idOrObj Check-ID or Object 
 	 * @param bool $storeAndAlert Store check-result and alert send alerts on FAIL 
 	 */
-	protected function runCheck($idOrObj,$storeAndAlert = false)
+	protected function runCheck($idOrObj, $storeAndAlert = false)
 	{
 		if(!is_object($idOrObj))
 		{
@@ -122,11 +120,10 @@ class check_service extends System
 		{
 			$objTest = $idOrObj;
 		}	
-	
 		
 		if($objTest->numRows < 1)
 		{
-			echo "ERROR: ServiceTest with ID $id not found!\n";
+			echo "ERROR: ServiceTest with ID $idOrObj not found!\n";
 			exit(1);
 		}
 		
@@ -264,4 +261,4 @@ class check_service extends System
 }
 
 $x = new check_service();
-?>
+
