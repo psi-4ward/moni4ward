@@ -65,6 +65,7 @@ $GLOBALS['TL_DCA']['tl_moni4ward_service'] = array
 		'Ping'						  => '{title_legend},title,type,exclusive;{alerts_legend},alerts',
 		'HTTPRequest'				  => '{title_legend},title,type,exclusive;{alerts_legend},alerts;{http_legend},http_url,http_port,http_response',
 		'Port'				  		  => '{title_legend},title,type,exclusive;{alerts_legend},alerts;{port_legend},port_port',
+		'VConnector'                  => '{title_legend},title,type,exclusive;{alerts_legend},alerts',
 	),
 
 	// Subpalettes
@@ -90,7 +91,7 @@ $GLOBALS['TL_DCA']['tl_moni4ward_service'] = array
 			'filter'                  => true,
 			'default'				  => 'Ping',
 			'inputType'               => 'select',
-			'options'        		  => array('Ping','HTTPRequest','Port'),
+			'options'        		  => array('Ping','HTTPRequest','Port', 'VConnector'),
 			'eval'                    => array('submitOnChange'=>true)
 		),
 		'exclusive' => array

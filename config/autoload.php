@@ -16,13 +16,12 @@
  */
 ClassLoader::addClasses(array
 (
-	'ServicePing'        => 'system/modules/moni4ward/ServicePing.php',
-	'MoniAlert'          => 'system/modules/moni4ward/MoniAlert.php',
-	'ServiceHTTPRequest' => 'system/modules/moni4ward/ServiceHTTPRequest.php',
 	'ModuleMoni4ward'    => 'system/modules/moni4ward/ModuleMoni4ward.php',
+	'MoniAlert'          => 'system/modules/moni4ward/MoniAlert.php',
+	'ServicePing'        => 'system/modules/moni4ward/ServicePing.php',
 	'ServicePort'        => 'system/modules/moni4ward/ServicePort.php',
-	// Bin
-	'check_service'      => 'system/modules/moni4ward/bin/check_service.php',
+	'ServiceHTTPRequest' => 'system/modules/moni4ward/ServiceHTTPRequest.php',
+	'ServiceVConnector'  => 'system/modules/moni4ward/ServiceVConnector.php',
 ));
 
 

@@ -148,7 +148,7 @@ class check_service extends System
 						if($objTest->failCount >= $alert['cycles'])
 						{
 							$objAlert = $this->Database->prepare('SELECT * FROM tl_moni4ward_alert WHERE id=?')->execute($alert['alert']);
-							new MoniAlert($objAlert,true,$objTest->row());
+							new MoniAlert($objAlert, true, $objTest->row());
 						}
 					}
 					$objTest->failCount = 0;
@@ -163,6 +163,7 @@ class check_service extends System
 			}
 			else 
 			{
+				// alert when change from PASS to FAIL
 				$failCount = $objTest->failCount + 1;
 				foreach($arrAlerts as $alert)
 				{
@@ -170,7 +171,8 @@ class check_service extends System
 					{
 						$objAlert = $this->Database->prepare('SELECT * FROM tl_moni4ward_alert WHERE id=?')->execute($alert['alert']);
 						$objTest->failCount = $failCount;
-						new MoniAlert($objAlert,false,$objTest->row());	
+						$objTest->value = $objCheck->getValue();
+						new MoniAlert($objAlert, false, $objTest->row());
 					}
 					
 				}

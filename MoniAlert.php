@@ -8,6 +8,7 @@ class MoniAlert extends System
 		$this->data['result'] = ($status) ? 'PASS' : 'FAIL';
 		$this->data['date'] = date('d.m.Y');
 		$this->data['time'] = date('H:i:s');
+		if(!$this->data['value']) $this->data['value'] = '';
 		
 		$mail = new Email();
 		$mail->from = $this->replaceVariables($objAlert->email_from);
