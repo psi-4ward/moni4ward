@@ -46,7 +46,7 @@ CREATE TABLE `tl_moni4ward_service_log` (
   `pid` int(10) unsigned NOT NULL default '0',
   `tstamp` int(10) unsigned NOT NULL default '0',
   `status` char(1) NOT NULL default '',
-  `value` text NOT NULL default '',
+  `value` text NULL,
   PRIMARY KEY  (`id`),
   KEY `pid` (`pid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
