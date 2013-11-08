@@ -29,6 +29,8 @@ class ServiceHTTPRequest extends System
 		curl_setopt($ch, CURLOPT_HEADER, 1);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
 		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Moni4ward)');
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
 		$content = curl_exec($ch); 
 		curl_close($ch); 
 
