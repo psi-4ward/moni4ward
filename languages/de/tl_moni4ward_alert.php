@@ -7,6 +7,7 @@ $GLOBALS['TL_LANG']['tl_moni4ward_alert']['new']		= array('Neue Benachrichtigung
 $GLOBALS['TL_LANG']['tl_moni4ward_alert']['show']		= array('Benachrichtigungdetails', 'Details der Benachrichtigung ID %s anzeigen');
 $GLOBALS['TL_LANG']['tl_moni4ward_alert']['delete']		= array('Benachrichtigung löschen', 'Benachrichtigung ID %s löschen');
 $GLOBALS['TL_LANG']['tl_moni4ward_alert']['edit']		= array('Benachrichtigung bearbeiten', 'Benachrichtigung ID %s bearbeiten');
+$GLOBALS['TL_LANG']['tl_moni4ward_alert']['copy'] 		= array('Benachrichtigung duplizieren', 'Benachrichtigung ID %s duplizieren');
 
 /**
  * Fields

@@ -7,6 +7,7 @@ $GLOBALS['TL_LANG']['tl_moni4ward_server']['new']		= array('Neuer Server', 'Eine
 $GLOBALS['TL_LANG']['tl_moni4ward_server']['show']		= array('Serverdetails', 'Details des Servers ID %s anzeigen');
 $GLOBALS['TL_LANG']['tl_moni4ward_server']['delete']	= array('Server löschen', 'Server ID %s löschen');
 $GLOBALS['TL_LANG']['tl_moni4ward_server']['edit']		= array('Server bearbeiten', 'Server ID %s bearbeiten');
+$GLOBALS['TL_LANG']['tl_moni4ward_server']['copy']		= array('Server duplizieren', 'Server ID %s duplizieren');
 $GLOBALS['TL_LANG']['tl_moni4ward_server']['services']	= array('Services bearbeiten', 'Services des Server ID %s bearbeiten');
 
 $GLOBALS['TL_LANG']['tl_moni4ward_server']['alert']		= array('Benachrichtigungen', 'Verwaltet die Benachrichtigungsoptionen');

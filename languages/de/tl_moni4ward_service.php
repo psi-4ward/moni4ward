@@ -7,6 +7,7 @@ $GLOBALS['TL_LANG']['tl_moni4ward_service']['new']		= array('Neuer Service', 'Ei
 $GLOBALS['TL_LANG']['tl_moni4ward_service']['show']		= array('Servicedetails', 'Details des Services ID %s anzeigen');
 $GLOBALS['TL_LANG']['tl_moni4ward_service']['delete']	= array('Service löschen', 'Service ID %s löschen');
 $GLOBALS['TL_LANG']['tl_moni4ward_service']['edit']		= array('Service bearbeiten', 'Service ID %s bearbeiten');
+$GLOBALS['TL_LANG']['tl_moni4ward_service']['copy'] 	= array('Service duplizieren', 'Service ID %s duplizieren');
 
 /**
  * Fields

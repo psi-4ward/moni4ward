@@ -41,6 +41,13 @@ $GLOBALS['TL_DCA']['tl_moni4ward_service'] = array
 				'href'                => 'act=edit',
 				'icon'                => 'edit.gif'
 			),
+			'copy' => array
+			(
+				'label'               => &$GLOBALS['TL_LANG']['tl_moni4ward_service']['copy'],
+				'href'                => 'act=copy',
+				'icon'                => 'copy.gif',
+				'attributes'          => 'onclick="Backend.getScrollOffset()"'
+			),
 			'delete' => array
 			(
 				'label'               => &$GLOBALS['TL_LANG']['tl_moni4ward_service']['delete'],
