@@ -12,8 +12,8 @@ class ServiceVConnector extends System
 		$this->ip = $data['ip'];
 		$this->port = 50231;
 
-//		$this->url = 'http://'.$this-ip.':'.$this->port.'/api/getstatus';
-		$this->url = 'http://localhost/test.xml';
+		$this->url = 'http://'.$this-ip.':'.$this->port.'/api/getstatus';
+//		$this->url = 'http://localhost/test.xml';
 	}
 
 	public function check()
@@ -29,6 +29,7 @@ class ServiceVConnector extends System
 		curl_setopt($ch, CURLOPT_HEADER, 1);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Moni4ward)');
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array('x-MyLocation-passwd: '.$GLOBALS['TL_CONFIG']['ventuzServerPassword']));
 		$content = curl_exec($ch);
 		curl_close($ch);
 
