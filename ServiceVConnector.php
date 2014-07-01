@@ -12,7 +12,7 @@ class ServiceVConnector extends System
 		$this->ip = $data['ip'];
 		$this->port = 50231;
 
-		$this->url = 'http://'.$this-ip.':'.$this->port.'/api/getstatus';
+		$this->url = 'http://'.$this->ip.':'.$this->port.'/api/getstatus';
 //		$this->url = 'http://localhost/test.xml';
 	}
 
