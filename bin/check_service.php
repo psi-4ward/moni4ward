@@ -8,7 +8,7 @@ if(PHP_SAPI != 'cli')
 /**
  * Initialize the system
  */
-define('TL_MODE', 'FE');
+define('TL_MODE', 'CLI');
 require_once realpath(dirname(__FILE__).'/../../../').'/initialize.php';
 
 /**
